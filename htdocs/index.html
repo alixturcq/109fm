@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="./jquery.js"></script>
+
+    <style>
+        #verysimplebox{
+            position : absolute;    /*here we make the box movable*/
+            width : 20px;
+            height : 20px;
+            background: #6dfa36;
+            top : 500px;
+            left : 200px;
+        }
+       
+    </style>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript" src="./jfunc.js"></script>
 </head>
 
 <body>
 
-<textarea id= "name" >
-</textarea> 
+<div id="verysimplebox">
+</div>
 
-<pre id= "name_feedback"></pre>
+<canvas id='Peanut' width="800",height="1000" style="border : 1px solid #6dfa36">
+Nique ta mère MAJ.</canvas>
 
-<script type="text/javascript" src="./jfunc.js"></script>
+<p id='coordonees'>
 
-
+</p>
 </body>
 </html>

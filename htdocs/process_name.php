@@ -1,19 +1,21 @@
 <?php
-if (isset($_GET['grizzly'])){
-    $nom = $_GET['grizzly'];
-    
-
+if (isset($_GET["cursorS"])){
+    $cursorS =  $_GET['cursorS'];
+    $x = $cursorS[0];
+    $y = $cursorS[1];
     $superfile = fopen("./superfile.txt", 'w'); //ouvre un fichier
 
     if ($superfile){
-        fwrite ($superfile,$nom."\n"); //"\n" = new line  
-        echo "file written";
+        $jsonCoords = json_encode($cursorS);
+        fwrite ($superfile,$jsonCoords); //"\n" = new line  
+        
     }
 
 
-}elseif(isset($_GET["brazil"])){  // There is always a post and get array in php file they are SUPERGLOBAL variable
+}elseif(isset($_GET["cursorR"])){  // There is always a post and get array in php file they are SUPERGLOBAL variable
 
     include ("superfile.txt");
+   
 
 
 }
